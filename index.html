@@ -12,72 +12,80 @@
         <h1><span>Medical appointment page</span></h1>
         <span><b>Zodoc</b></span><span> log in</span><br>
     </header>
-    <main>
+    <main> 
+        <form action="https://httpbin.org/get">
         <div>
             <img src="IMG/doctor.jpg" height="30px" width="30px">
             <p><b>Dr.Carley Ceballos</b><br>
                 Wendnesday,Oct 16-4:00pm <br>
                 1785 columbus Av, Boston, MA,02176.<br>
             </p>
-            <span><b>Tell us a bit about you.</b></span><br>
-            <span>to book your appoinment, we need to verify a few things for Dr. Ceballos' Office.</span>
         </div>
         <div>
-            <form action="https://httpbin.org/get"></form>
+            <fieldset>
+                <legend><span><b>Tell us a bit about you.</b></span><br></legend>
+            
+            <span>to book your appoinment, we need to verify a few things for Dr. Ceballos' Office.</span><br>
             <label for="email">Email:</label><br>
-            <input type="email" name="email"><br>
+            <input type="email" name="email" require placeholder="email@gmail.com"d><br>
             <label for="name">First Name:</label><br>
-            <input type="name" name="name"><br>
+            <input type="name" name="name" required ><br>
             <label for="lastname">Last Name:</label><br>
-            <input type="name" name="lastname"><br>
+            <input type="name" name="lastname" required><br>
             <label for="dob">Date of Birthday:</label><br>
-            <input type="dob" name="Date Of Birthday"><br>
+            <input type="date" name="Date Of Birthday" required><br>
             <label for="Sex">Sex:</label><br>
             <input type="radio" name="Sex"><span>Male</span><br>
             <input type="radio" name="Sex"><span>Female</span><br>
+            </fieldset>
         </div>
         <div>
             <label for="Phone number"><b>Enter your mobile phone number</b></label><br>
             <span><small>We'll text you to verify your account</small></span><br>
-            <input type="PhoneNumber" name="Phone number"><br>
+            <input type="PhoneNumber" name="Phone number" required><br>
         </div>
         <div>
-            <span><b>Addres of Residence</b></span><br>
+            <fieldset>
+            <legend><span><b>Addres of Residence</b></span><br></legend>
             <label for="Address">Street Address:</label>
-            <input type="Addres" name="Street Address"><br>
+            <input type="Addres" name="Street Address" required placeholder="Street, av"><br>
             <label for="Address">Street Address2:</label>
             <input type="Address" name="Street Address2"><br>
             <label for="city">City:</label>
-            <input type="city" name="City">
+            <input type="city" name="City" required placeholder="City" >
             <label for="State">State:</label>
-            <input type="State" name="State"><br>
+            <input type="State" name="State" required placeholder="State"><br>
             <label for="Postal">Zip code</label>
-            <input type="Postal" name="Zip Code">
+            <input type="Postal" name="Zip Code"required placeholder="zip code" >
             <label for="country">Country:</label>
-            <input type="country" name="country"><br>
+            <input type="country" name="country" required placeholder="Country"><br>
+        </fieldset>
         </div>
         <div>
-
-            <label type="reason"> <b>Visit reason</b></label><br>
+            <fieldset>
+           <legend> <label type="reason"> <b>Visit reason</b></label><br></legend>
             <span><small>Common conditions and services</small></span><br>
             <input type="Radio" name="reason"><span>Depression</span><br>
             <input type="Radio" name="reason"><span>Acupuncture</span><br>
             <input type="Radio" name="reason"><span>Back Pain</span><br>
             <input type="Radio" name="reason"><span>Neck Pain</span><br>
             <input type="Radio" name="reason"><span>Sciatica</span><br>
+            </fieldset>
         </div>
         <div>
-            <label type="Time of day"> <b>Preferred time of day</b></label><br>
+            <fieldset>
+            <legend><label type="Time of day"> <b>Preferred time of day</b></label><br></legend>
             <input type="checkbox" name="time of day"><span>Early morning<small>(1)</small></span><br>
             <span><small>Starts before 10 am</small></span><br>
             <input type="checkbox" name="time of day"><span>Morning <small>(4)</small></span><br>
             <span><small>Start before 12 pm</small></span><br>
             <input type="checkbox" name="time of day"><span>Afternoon <small>(4)</small></span><br>
             <span><small>Start after 12 pm</small></span><br>
+            </fieldset>
         </div>
         <div>
-            <label type="pwd"> <b>Create a password</b></label><br>
-            <input type="password" name="Password"><br>
+           <label type="pwd"> <b>Create a password</b></label><br>
+            <input type="password" name="Password" required><br>
             <ul>
                 <li>Use at least 8 characters</li>
                 <li>Use letters</li>
@@ -89,10 +97,24 @@
             <input type="checkbox" name="Terms of use"><span>I have read and accept Zocodoc's <b><u>Terms of Use</u></b> and
                 <b><u>Pivacy Policy</u></b></span>
         </div>
-    </main>
-    <footer>
     <input type="submit">
     <input type="reset">
+    </form>
+    </main>
+    
+       
+
+   <footer>  
+    <fieldset>
+            <legend><span><b>Log in</b></span></legend>
+            <form action="https://httpbin.org/get">
+                <label for="email">Email:</label><br>
+                <input type="email" name="email" require placeholder="email@gmail.com"d><br>
+                <label type="pwd"> <b>Introduce Password</b></label><br>
+                <input type="password" name="Password" required><br>
+                <input type="submit">
+            </form>
+        </fieldset>
     </footer>
 </body>
 </html>
